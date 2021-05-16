@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&family=Shadows+Into+Light&display=swap');
+/*
+color1: #bababa
+color2: #8d8d8d
+color3: #a6cbeb
+color4: #4c96d7
+color5: #3a3a3a
+color6: #ffffff
+
+*/
+
+body{
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;  
+    margin-top: 10px;
+    height: 100%;
+    background-color: #ffffff;
+    font-size: 1rem;
+}
+main{
+    padding: 10px;
+}
+.top-header {    
+
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.web-design {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.top-header img{
+    width: 200px;
+}
+
+
+#motto {
+    color: #282b40;
+    font-size: 1.3rem;
+ 
+}
+
+footer {   
+    text-align: center;    
+    margin-top: 15px;   
+    font-size: 0.9rem;
+  
+}
+hr{
+    border: 2px solid #3a3a3a;
+}
+
+
+
+.navigation {
+    display: flex;
+}
+
+.navigation li {
+    display: block;
+    flex: 1 1 100%;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3a3a3a;
+    width: 100%;
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+ 
+}
+
+li a:hover {
+    background-color: #4c96d7;
+    
+}
+
+
+img {
+    width: 100%;
+}
+.delorean{
+    height: 80vh;
+    background-image: url("../images/delorean.jpg");
+    background-repeat:no-repeat;
+    background-size:90%;
+    background-position: right;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.delorean h3{
+    color: #4c96d7;
+    font-weight: bolder;
+   /* line-height: -5px;*/
+}
+.delorean p{
+    color: #4c96d7;
+    font-weight: lighter;
+}
+.delorean img{
+    width: 80px;
+}
+.delorean-upgrades{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.delorean-upgrades a{
+    display: block;
+    text-align: center;
+}
+.catalog{
+    background-color: #4c96d7;
+   /* display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;*/
+}
+.details{
+    display: grid;
+    grid-template-areas: "review" 
+                        "upgrades";
+    gap: 20px;
+}
+.upgrades{
+    grid-area: upgrades;
+}
+.delorean-reviews{
+    grid-area: review;
+}
+.catalog img{
+    max-width: 80px;
+}
+
+.logo-wrapper {
+	height:120px;
+	display:flex;
+	align-items: center;
+    justify-content: center;
+	border:solid 1px #eee;
+}
+
+.logo-wrapper img {
+	max-height:100px;
+	/*max-width:100%;*/
+}
+#own{
+    width: 200px;  
+    
+}  
+#div-button{    
+    position: absolute;
+    bottom: 15px;
+    left: 28%;
+}
+
+@media only screen and (min-width: 768px) {
+    html{
+        background-image: url("../images/site/small_check.jpg");
+    }
+   
+    body {  
+        margin: 0 auto;   
+        max-width: 80vw;
+        font-family: 'Roboto Mono', monospace;
+        border: 4px solid #a6cbeb;
+        border-radius: 5px;
+        margin-top: 10px;
+        height: 100%;
+        background-color: #ffffff;
+       /* background-image: url("../images/site/checkerboard.jpg");*/
+        
+    }
+    .top-header {
+    
+        color:#8d8d8d;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        padding: 10px;
+    
+    }
+    #own{
+        width: 100px;  
+        
+    }  
+    #div-button{    
+        position:unset;
+       
+    }
+    .details{
+        display: grid;
+        grid-template-areas:  "upgrades review"   ;
+        gap: 20px;
+    }
+}
