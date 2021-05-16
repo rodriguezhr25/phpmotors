@@ -3,7 +3,7 @@
 color1: #bababa
 color2: #8d8d8d
 color3: #a6cbeb
-color4: #4c96d7
+color4: #3D79AD
 color5: #3a3a3a
 color6: #ffffff
 
@@ -84,14 +84,14 @@ hr{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 10px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
  
 }
 
 li a:hover {
-    background-color: #4c96d7;
+    background-color: #3D79AD;
     
 }
 
@@ -110,13 +110,13 @@ img {
     position: relative;
     
 }
-.delorean h3{
-    color: #4c96d7;
+.delorean h2{
+    color: #3D79AD;
     font-weight: bolder;
    /* line-height: -5px;*/
 }
 .delorean p{
-    color: #4c96d7;
+    color: #3D79AD;
     font-weight: lighter;
 }
 .delorean img{
@@ -132,7 +132,7 @@ img {
     text-align: center;
 }
 .catalog{
-    background-color: #4c96d7;
+    background-color: #3D79AD;
    /* display: flex;
     justify-content: center;
     align-content: center;
@@ -193,9 +193,8 @@ img {
        /* background-image: url("../images/site/checkerboard.jpg");*/
         
     }
-    .top-header {
-    
-        color:#8d8d8d;
+    .top-header {    
+      
         display: flex;
         justify-content: space-between;
         font-size: 0.8rem;
@@ -214,5 +213,11 @@ img {
         display: grid;
         grid-template-areas:  "upgrades review"   ;
         gap: 20px;
+    }
+    .navigation li a {       
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1rem;
+     
     }
 }

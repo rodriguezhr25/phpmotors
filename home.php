@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> PHP Motors </title>
+    <title>Home | PHP Motors </title>
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -17,9 +17,9 @@
     </nav>
 
     <main>
-        <h2>Welcome to PHP Motors! </h2>
+        <h1>Welcome to PHP Motors! </h1>
         <div class="delorean">
-            <h3>DMC Delorean</h3>
+            <h2>DMC Delorean</h2>
             <p>3 cups holders
                 <br> Superman Doors
                 <br> Fuzzi dice!
@@ -31,7 +31,7 @@
      
         <div class="details">
             <div class="upgrades">
-                <h4>Delorean Upgrades</h4>
+                <h2>Delorean Upgrades</h2>
                 <div class="delorean-upgrades">
                     <div>
                         <div class="catalog">
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="delorean-reviews">
-                <h4>DMC Delorean Reviews</h4>
+                <h2>DMC Delorean Reviews</h2>
                 <ul>
                     <li>"So fast its almost like traveling in time (4/5)"</li>
                     <li>"Cooles ride on the road" (4/5)</li>
