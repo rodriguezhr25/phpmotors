@@ -1,3 +1,3 @@
 
   <img src="/phpmotors/images/site/logo.png" alt="logo-phpmotors">
-  <p> My Account</p>
+  <p> <a href="/phpmotors/accounts/index.php?action=login">  My Account</a></p>

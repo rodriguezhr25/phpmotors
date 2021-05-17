@@ -13,7 +13,7 @@
         <?php require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
     </header>
     <nav id="page_nav" class="navigation">
-        <?php require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/navigation.php'; ?>
+      <?php echo $navlist ?>
     </nav>
 
     <main>

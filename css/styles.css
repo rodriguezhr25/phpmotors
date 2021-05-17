@@ -176,6 +176,100 @@ img {
     left: 28%;
 }
 
+/*Login CSS*/
+
+.login-box {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color: white;
+  box-sizing: border-box;
+  padding: 50px 30px;
+  margin: 0 auto;
+}
+#register-box {
+    width: 320px;
+    height: 500px;
+    background: #000;
+    color: white;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    margin: 0 auto;
+  }
+.login-box .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.login-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"],.login-box input[type="email"], .login-box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-box input[type="submit"] ,.login-box input[type="button"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #b80f22;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.required-symbol{
+    color:#3D79AD;;
+}
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #3D79AD;
+  color: #000;
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.login-box a:hover {
+  color: #fff;
+}
+/* .login-body{
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;  
+    margin-top: 10px;
+    height: 100%;
+    background-color: #ffffff;
+    font-size: 1rem;
+} */
 @media only screen and (min-width: 768px) {
     html{
         background-image: url("../images/site/small_check.jpg");
@@ -193,6 +287,15 @@ img {
        /* background-image: url("../images/site/checkerboard.jpg");*/
         
     }
+ /*    .login-body {  
+        margin: 0 auto;   
+        max-width: 80vw;
+        font-family: 'Roboto Mono', monospace;
+        border: none;
+        background-color: #ffffff;
+       /* background-image: url("../images/site/checkerboard.jpg");*/
+        
+    } */
     .top-header {    
       
         display: flex;
@@ -201,6 +304,19 @@ img {
         padding: 10px;
     
     }
+    .top-header a:link, .top-header a:visited {
+        background-color: #3a3a3a;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      .top-header a:hover, .top-header a:active {
+        background-color: #3D79AD;
+        ;
+      }
     #own{
         width: 100px;  
         
