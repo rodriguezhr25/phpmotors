@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | PHP Motors </title>
+    <title>Account Registration | PHP Motors </title>
     <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
@@ -18,7 +18,7 @@
     <div class="login-box" id="register-box">
       
       <h1>Register Here</h1>
-      <form action="">
+      <form>
          <!-- FIRSNAME INPUT -->
         <label for="clientFirstName">First Name <span class="required-symbol">(*)</span>  </label>
         <input type="text" name="clientFirstName" id="clientFirstName"  placeholder="Enter Name">

@@ -13,7 +13,7 @@
         <?php require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
     </header>
     <nav id="page_nav" class="navigation">
-      <?php echo $navlist ?>
+        <?php echo $navlist ?>
     </nav>
 
     <main>
@@ -25,10 +25,10 @@
                 <br> Fuzzi dice!
             </p>
             <div id="div-button">
-          <img src="images/site/own_today.png" alt="button-own-today" id = "own">
+                <img src="images/site/own_today.png" alt="button-own-today" id="own">
+            </div>
         </div>
-        </div>
-     
+
         <div class="details">
             <div class="upgrades">
                 <h2>Delorean Upgrades</h2>
