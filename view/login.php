@@ -18,8 +18,13 @@
     <main>
     <div class="login-box">
       
-      <h1>Login Here</h1>
-      <form>
+      <h1>PHP Motors Login</h1>
+      <?php
+      if (isset($message)) {
+        echo $message;
+      }
+      ?>
+      <form action="/phpmotors/accounts/index.php" method="post">
         <!-- USERNAME INPUT -->
         <label for="email">Email </label>
         <input type="email" name="email" id="email"  placeholder="Enter Email">
@@ -28,7 +33,7 @@
         <input type="password" name="password" id="password" placeholder="Enter Password">
         <input type="submit" value="Log In">
         <a href="#">Forgot Password</a><br>
-        <a href="index.php?action=register">Create a New Account</a>
+        <a href="index.php?action=registration">Create a New Account</a>
       </form>
     </div>
     </main>

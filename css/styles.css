@@ -182,16 +182,25 @@ img {
 
 .login-box {
   width: 320px;
-  height: 420px;
+  height: 100%;
   background: #000;
   color: white;
   box-sizing: border-box;
   padding: 50px 30px;
   margin: 0 auto;
 }
+#vehicle-register {
+    width: 50vw;
+    height: 100%;
+    background: #000;
+    color: white;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    margin: 0 auto;
+  }
 #register-box {
     width: 320px;
-    height: 500px;
+    height: 100%;
     background: #000;
     color: white;
     box-sizing: border-box;
@@ -226,7 +235,7 @@ img {
   margin-bottom: 20px;
 }
 
-.login-box input[type="text"],.login-box input[type="email"], .login-box input[type="password"] {
+.login-box input[type="text"],.login-box input[type="email"], .login-box input[type="password"], .login-box input[type="number"]{
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -235,7 +244,16 @@ img {
   color: #fff;
   font-size: 16px;
 }
-
+.login-box select{
+    border: none;
+    border-bottom: 1px solid #fff;
+   width: 100%;
+    outline: none;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
 .login-box input[type="submit"] ,.login-box input[type="button"]{
   border: none;
   outline: none;
@@ -277,6 +295,14 @@ img {
     background-color: #3D79AD;
     ;
   }
+  .error-message{
+      color: red;
+      font-weight: bold;
+  }
+  .success-message{
+    color: green;
+    font-weight: bold;
+}
 @media only screen and (min-width: 768px) {
     html{
         background-image: url("../images/site/small_check.jpg");
