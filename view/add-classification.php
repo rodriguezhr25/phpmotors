@@ -29,7 +29,7 @@ if (isset($message)) {
    
 
     <label for="classificationName">Classification Name <span class="required-symbol">(*)</span> </label>
-    <input name="classificationName" id="classificationName" type="text">    
+    <input name="classificationName" id="classificationName" type="text"  required>    
   
     <input type="submit" name="submit" value="Add Classification" id="regbtn">
     <input type="hidden" name="action" value="register-classification">

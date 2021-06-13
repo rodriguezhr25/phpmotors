@@ -7,26 +7,25 @@ require_once '../library/connections.php';
 require_once '../model/main-model.php';
 //Get the vechicle model
 require_once '../model/vehicle-model.php';
+
+// Create or access a Session
+session_start();
 //Get the array of classifications
 $classifications = getClassifications();
-
+// Get the functions library
+require_once '../library/functions.php';
 /* var_dump($classifications);
 exit; */
 
-//Build a navigation bar usin the $classifications array
 
-$navlist = '<ul>';
-$navlist .= "<li><a href='/phpmotors/index.php' title='View the PHP Motors home page'>Home</a></li>";
-foreach($classifications as $classification){
-    $navlist .= "<li><a href= '/phpmotors/index.php?action=" .urlencode($classification['classificationName']) . "' title = 'View our $classification[classificationName] product line'> $classification[classificationName]</a></li>";
-}
-$navlist .= '</ul>';
+
+$navlist = buildNavigation($classifications);
+/* //Build the select list
 $selectList  = "<select id='classificationId' name='classificationId'>";
 foreach($classifications as $classification){
     $selectList .= "<option value=$classification[classificationId]>$classification[classificationName]</option>";
 }
-
-$selectList .= '</select>';
+$selectList .= '</select>'; */
 
     $action = filter_input(INPUT_POST, 'action');
     if($action == NULL){
@@ -38,15 +37,18 @@ $selectList .= '</select>';
       
         case 'register':
                 // Filter and store the data
-              $classificationId = filter_input(INPUT_POST, 'classificationId');
-              $invMake = filter_input(INPUT_POST, 'invMake');
-              $invModel = filter_input(INPUT_POST, 'invModel');
-              $invDescription = filter_input(INPUT_POST, 'invDescription');
-              $invImage = filter_input(INPUT_POST, 'invImage');
-              $invThumbnail = filter_input(INPUT_POST, 'invThumbnail');
-              $invPrice = filter_input(INPUT_POST, 'invPrice');
-              $invStock = filter_input(INPUT_POST, 'invStock');
-              $invColor = filter_input(INPUT_POST, 'invColor');
+
+            if ($_SESSION['loggedin'] && $_SESSION['clientData']['clientLevel'] > 1) {       
+                 
+              $classificationId = trim(filter_input(INPUT_POST, 'classificationId' , FILTER_SANITIZE_NUMBER_INT));
+              $invMake = trim(filter_input(INPUT_POST, 'invMake' ,FILTER_SANITIZE_STRING));
+              $invModel = trim(filter_input(INPUT_POST, 'invModel', FILTER_SANITIZE_STRING));
+              $invDescription = trim(filter_input(INPUT_POST, 'invDescription', FILTER_SANITIZE_STRING));
+              $invImage = trim(filter_input(INPUT_POST, 'invImage', FILTER_SANITIZE_STRING));
+              $invThumbnail = trim(filter_input(INPUT_POST, 'invThumbnail', FILTER_SANITIZE_STRING));
+              $invPrice = trim(filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION));
+              $invStock =trim(filter_input(INPUT_POST, 'invStock' , FILTER_SANITIZE_NUMBER_INT));
+              $invColor = trim(filter_input(INPUT_POST, 'invColor', FILTER_SANITIZE_STRING));
           
                       // Check for missing data
               if(empty($classificationId) || empty($invMake) || empty($invModel) || empty($invDescription)|| empty($invImage)
@@ -70,8 +72,14 @@ $selectList .= '</select>';
                   include '../view/add-vehicle.php';
                   exit;
               }
+              include '../view/vehicles-management.php';  
+                      
+            }else{
+                header('Location: /phpmotors/');
+            }
             break;
             case 'register-classification':
+                if ($_SESSION['loggedin'] && $_SESSION['clientData']['clientLevel'] > 1) {      
                 // Filter and store the data
               $classificationName = filter_input(INPUT_POST, 'classificationName');
             
@@ -97,15 +105,32 @@ $selectList .= '</select>';
                   include '../view/add-classification.php';
                   exit;
               }
+            }else{
+                header('Location: /phpmotors/');
+            }
             break;
         case 'add-vehicle':
+            if ($_SESSION['loggedin'] && $_SESSION['clientData']['clientLevel'] > 1) {     
                 include '../view/add-vehicle.php';
+            }else{
+                header('Location: /phpmotors/');
+            }
+
                     break;
         case 'add-classification':
+            if ($_SESSION['loggedin'] && $_SESSION['clientData']['clientLevel'] > 1) {   
             include '../view/add-classification.php';
+            }else{
+                header('Location: /phpmotors/');
+            }
         break;
         default:
-        include '../view/vehicles-management.php';  
+        if ($_SESSION['loggedin'] && $_SESSION['clientData']['clientLevel'] > 1) {       
+          include '../view/vehicles-management.php';  
+            
+        }else{
+            header('Location: /phpmotors/');
+        }
          break;
         }
     

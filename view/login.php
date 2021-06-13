@@ -20,18 +20,20 @@
       
       <h1>PHP Motors Login</h1>
       <?php
-      if (isset($message)) {
-        echo $message;
-      }
+    if (isset($_SESSION['message'])) {
+      echo $_SESSION['message'];
+     }
       ?>
-      <form action="/phpmotors/accounts/index.php" method="post">
+      <form action="/phpmotors/accounts/" method="post">
         <!-- USERNAME INPUT -->
-        <label for="email">Email </label>
-        <input type="email" name="email" id="email"  placeholder="Enter Email">
+        <label for="clientEmail">Email </label>
+        <input type="email" name="clientEmail" id="clientEmail" <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?> required  placeholder="Enter Email">
         <!-- PASSWORD INPUT -->
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Enter Password">
-        <input type="submit" value="Log In">
+        <label for="clientPassword">Password</label>      
+        <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        <span>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span> 
+        <input type="submit" value="Log In" id="logbtn">
+        <input type="hidden" name="action" value="Login">
         <a href="#">Forgot Password</a><br>
         <a href="index.php?action=registration">Create a New Account</a>
       </form>

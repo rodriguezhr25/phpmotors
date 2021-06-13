@@ -181,7 +181,7 @@ img {
 /*Login CSS*/
 
 .login-box {
-  width: 320px;
+ width: 50vw;
   height: 100%;
   background: #000;
   color: white;
@@ -199,7 +199,7 @@ img {
     margin: 0 auto;
   }
 #register-box {
-    width: 320px;
+    width: 50vw;
     height: 100%;
     background: #000;
     color: white;
@@ -263,6 +263,18 @@ img {
   font-size: 18px;
   border-radius: 20px;
 }
+.login-box span{
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+}
+.login-box #clientPassword {
+ 
+    margin-bottom: 0px;
+  }
+  .login-box #regbtn ,.login-box #logbtn {
+ 
+    margin-top: 20px;
+  }
 .required-symbol{
     color:#3D79AD;;
 }
@@ -282,7 +294,7 @@ img {
 .login-box a:hover {
   color: #fff;
 }
-.top-header a:link, .top-header a:visited {
+.top-header a.btn:link, .top-header a.btn:visited {
     background-color: #3a3a3a;
     color: white;
     padding: 14px 25px;
@@ -291,9 +303,22 @@ img {
     display: inline-block;
   }
   
-  .top-header a:hover, .top-header a:active {
+  .top-header a.btn:hover, .top-header a.btn:active {
     background-color: #3D79AD;
-    ;
+    
+  }
+  .top-header a.line:link, .top-header a.line:visited {
+  
+    color: #3a3a3a;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .top-header a.line:hover, .top-header a.line:active {
+     color: green;
+    
   }
   .error-message{
       color: red;

@@ -27,16 +27,18 @@
     <form action="/phpmotors/accounts/index.php" method="post">
       <!-- FIRSNAME INPUT -->
       <label for="clientFirstname">First Name <span class="required-symbol">(*)</span> </label>
-      <input type="text" name="clientFirstname" id="fname" placeholder="Enter Name">
+      <input type="text" name="clientFirstname" id="clientFirstname" placeholder="Enter Name" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> required>
+      
       <!-- LASTNAME INPUT -->
       <label for="clientLastname">Last Name <span class="required-symbol">(*)</span></label>
-      <input type="text" name="clientLastname" id="lname" placeholder="Enter Name">
+      <input type="text" name="clientLastname" id="clientLastname" placeholder="Enter Name" <?php if(isset($clientLastname)){echo "value='$clientLastname'";}  ?> required>
       <!-- EMAIL INPUT -->
       <label for="clientEmail">Email <span class="required-symbol">(*)</span> </label>
-      <input type="email" name="clientEmail" id="email" placeholder="Enter Email">
+      <input type="email" name="clientEmail" id="clientEmail" placeholder="Enter Email" <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?> required>
       <!-- PASSWORD INPUT -->
       <label for="clientPassword">Password <span class="required-symbol">(*)</span></label>
-      <input type="password" name="clientPassword" id="password" placeholder="Enter Password">
+      <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+      <span>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span> 
       <input type="submit" name="submit" value="Register" id="regbtn">
       <input type="hidden" name="action" value="register">
     </form>
