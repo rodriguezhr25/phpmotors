@@ -2,11 +2,14 @@
 if (!$_SESSION['loggedin']) {
   header('Location: /phpmotors/');
 }
+if (isset($_SESSION['message'])) {
+  $message = $_SESSION['message'];
+ }
 $firstName =  $_SESSION['clientData']['clientFirstname'] ;
 $lastName =   $_SESSION['clientData']['clientLastname'];
 $userName =  $firstName . ' ' . $lastName;
 $email =  $_SESSION['clientData']['clientEmail'];
-/* $clientLevel =  $_SESSION['clientData']['clientLevel']; */
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,12 +32,18 @@ $email =  $_SESSION['clientData']['clientEmail'];
   <main>
     <h1> <?php echo $userName ?> </h1>
     <p> You are logged in: </p>
+    <?php
+            if (isset($message)) {
+                echo $message;
+            }
+            ?>
     <ul>
     <li>First name: <?php echo $firstName ?> </li>
     <li>Last name: <?php echo $lastName ?> </li>
     <li>Email: <?php echo $email ?></li>
-   <!--  <li>ClientLevel: <?php echo $clientLevel ?></li> -->
+
     </ul>
+    <?php echo $accountManagement ?>
     <?php echo $adminMenu ?>
 
 

@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+   if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+   } 
+?><!DOCTYPE html>
 <html lang="en"> 
 <head>
     <meta charset="UTF-8">

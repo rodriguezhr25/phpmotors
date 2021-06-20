@@ -244,10 +244,40 @@ img {
   color: #fff;
   font-size: 16px;
 }
-.login-box select{
+.login-box select {
     border: none;
     border-bottom: 1px solid #fff;
    width: 100%;
+    outline: none;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+ #inventoryDisplay {   
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #inventoryDisplay td, #inventoryDisplay th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #inventoryDisplay tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #inventoryDisplay tr:hover {background-color: #ddd;}
+  
+  #inventoryDisplay th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3D79AD;
+    color: #ffffff;
+  }
+#classificationList{
+   
+    width: 50%;
     outline: none;
     height: 40px;
     margin-top: 20px;
@@ -271,7 +301,7 @@ img {
  
     margin-bottom: 0px;
   }
-  .login-box #regbtn ,.login-box #logbtn {
+  .login-box #regbtn ,.login-box #logbtn ,.login-box #regbtnp {
  
     margin-top: 20px;
   }
